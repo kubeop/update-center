@@ -1,8 +1,11 @@
 name:  mirrors
 
 on:
-  schedule:
-    - cron:  '0 1 * * *'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'updates/**'
   workflow_dispatch:
 
 jobs:
