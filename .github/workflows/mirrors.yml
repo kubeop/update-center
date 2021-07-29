@@ -1,6 +1,8 @@
 name:  mirrors
 
 on:
+  schedule:
+    - cron: "0 0 * * *"
   push:
     branches:
       - main
@@ -29,10 +31,8 @@ jobs:
         pip install -r requirements.txt
     - name: Run script
       run: |
-        rm -rf huawei/* ustc/*
-        python mirrors.py current
-        python mirrors.py experimental
-        python mirrors.py dynamic-stable-2.289.1
+        rm -rf updates/*
+        python mirrors.py 2.289.1
     - name: Push
       uses: github-actions-x/commit@v2.0
       with:

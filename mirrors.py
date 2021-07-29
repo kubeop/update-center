@@ -108,7 +108,7 @@ def main():
   jenkins_version = sys.argv[1]
 
   original_download_url = "https://updates.jenkins.io/download/"
-  original_update_center_url = "https://mirrors.ustc.edu.cn/jenkins/updates/" + jenkins_version + "/update-center.json"
+  original_update_center_url = "https://mirrors.ustc.edu.cn/jenkins/updates/dynamic-stable-" + jenkins_version + "/update-center.json"
   original_file = urllib.request.urlopen(original_update_center_url)
   try:
     original_context = original_file.read()
@@ -132,7 +132,7 @@ def main():
     uc.plugins = json.loads(json.dumps(original["plugins"]).replace(original_download_url, mirror_url))
     uc.core = json.loads(json.dumps(original["core"]).replace(original_download_url, mirror_url))
 
-    uc_dir = site + "/" + jenkins_version
+    uc_dir = "updates/" + site
     if not os.path.exists(uc_dir):
       os.makedirs(uc_dir)
     with open(uc_dir + "/update-center.json", "w") as fd:
