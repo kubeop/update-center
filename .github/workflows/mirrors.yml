@@ -32,7 +32,7 @@ jobs:
     - name: Run script
       run: |
         rm -rf updates/*
-        python mirrors.py 2.319.1
+        python mirrors.py 2.332.1
     - name: Push
       uses: github-actions-x/commit@v2.0
       with:
