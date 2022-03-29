@@ -105,10 +105,8 @@ def main():
   private_key = "rootCA/update-center.key"
   public_key = "rootCA/update-center.crt"
 
-  jenkins_version = sys.argv[1]
-
   original_download_url = "https://updates.jenkins.io/download/"
-  original_update_center_url = "https://mirrors.ustc.edu.cn/jenkins/updates/dynamic-stable-" + jenkins_version + "/update-center.json"
+  original_update_center_url = "https://mirrors.ustc.edu.cn/jenkins/updates/stable/update-center.json"
   original_file = urllib.request.urlopen(original_update_center_url)
   try:
     original_context = original_file.read()

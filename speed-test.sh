@@ -21,10 +21,13 @@ image_tag="latest"
 declare -A mirrors
 mirrors=(
   [ustc]="https://mirrors.ustc.edu.cn/jenkins/"
+  [tsinghua]="https://mirrors.tuna.tsinghua.edu.cn/jenkins/"
+  [bfsu]="https://mirrors.bfsu.edu.cn/jenkins/"
+  [aliyun]="https://mirrors.aliyun.com/jenkins/"
   [huawei]="https://mirrors.huaweicloud.com/jenkins/"
 )
 
-file="updates/current/plugin-versions.json"
+file="updates/stable/update-center.json"
 
 ######################################################################################################
 # function
