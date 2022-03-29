@@ -27,7 +27,7 @@ mirrors=(
   [huawei]="https://mirrors.huaweicloud.com/jenkins/"
 )
 
-file="updates/stable/update-center.json"
+file="updates/current/plugin-versions.json"
 
 ######################################################################################################
 # function
