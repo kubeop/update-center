@@ -1,7 +1,6 @@
 # jenkins-update-center  
 
-![GitHub](https://img.shields.io/github/license/lework/jenkins-update-center)
-[![](https://data.jsdelivr.com/v1/package/gh/lework/jenkins-update-center/badge)](https://www.jsdelivr.com/package/gh/lework/jenkins-update-center)
+[![](https://data.jsdelivr.com/v1/package/gh/k8sre/update-center/badge)](https://www.jsdelivr.com/package/gh/k8sre/update-center)
 
 本脚本由[lework/jenkins-update-center](https://github.com/lework/jenkins-update-center)修改而来，仅支持LTS版本Jenkins配置。
 
@@ -48,5 +47,4 @@ curl -sSL https://cdn.jsdelivr.net/gh/k8sre/update-center/speed-test.sh | bash
    > Or it can be modified on the web.
    >
    > Go to `Jenkins` → `Manage Jenkins` → `Manage Plugins` → `Advanced` → Update Site and submit URL to your `https://cdn.jsdelivr.net/gh/k8sre/update-center/updates/ustc/update-center.json`
-
 
