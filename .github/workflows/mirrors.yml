@@ -33,13 +33,7 @@ jobs:
       run: |
         rm -rf updates/*
         python mirrors.py
-        git config --global --add safe.directory /github/workspace
-    - name: Push
-      uses: actions-x/commit@v2
-      with:
-        token: ${{ secrets.TOKEN }}
-        branch: main
-        repository: https://github.com/k8sre/update-center.git
-        files: updates
-        force: true
-        message: 'Automatically updated using GitHub Actions'
+        git remote add origin https://k8sre:${{ secrets.TOKEN }}@github.com/k8sre/update-center.git
+        git add -A
+        git commit -m "Automatically updated using GitHub Actions"
+        git push -u origin main
