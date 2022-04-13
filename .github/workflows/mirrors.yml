@@ -35,10 +35,11 @@ jobs:
         python mirrors.py
         git config --global --add safe.directory /github/workspace
     - name: Push
-      uses: github-actions-x/commit@v2.8
+      uses: actions-x/commit@v2
       with:
-        github-token: ${{ secrets.TOKEN }}
-        push-branch: 'main'
-        commit-message: 'github action commit.'
-        force-add: 'true'
-        force-push: 'true'
+        token: ${{ secrets.TOKEN }}
+        branch: main
+        repository: https://github.com/k8sre/update-center.git
+        files: updates
+        force: true
+        message: 'Automatically updated using GitHub Actions'
