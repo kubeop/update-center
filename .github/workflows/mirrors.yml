@@ -38,4 +38,4 @@ jobs:
         git remote set-url origin https://k8sre:${{ secrets.TOKEN }}@github.com/k8sre/update-center.git
         git add -A
         git commit -m "Automatically updated using GitHub Actions"
-        git push
+        git push origin HEAD:main
