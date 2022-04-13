@@ -33,7 +33,7 @@ jobs:
       run: |
         rm -rf updates/*
         python mirrors.py
-        git remote add origin https://k8sre:${{ secrets.TOKEN }}@github.com/k8sre/update-center.git
+        git remote set-url https://k8sre:${{ secrets.TOKEN }}@github.com/k8sre/update-center.git
         git add -A
         git commit -m "Automatically updated using GitHub Actions"
         git push -u origin main
