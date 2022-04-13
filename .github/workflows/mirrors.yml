@@ -40,3 +40,4 @@ jobs:
         push-branch: 'main'
         commit-message: 'github action commit.'
         force-add: 'true'
+        force-push: 'true'
