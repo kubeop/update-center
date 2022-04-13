@@ -33,6 +33,7 @@ jobs:
       run: |
         rm -rf updates/*
         python mirrors.py
+        git config --global --add safe.directory /github/workspace
     - name: Push
       uses: github-actions-x/commit@v2.8
       with:
