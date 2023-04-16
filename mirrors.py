@@ -13,9 +13,9 @@ import base64
 import binascii
 import http.client
 import urllib.request
-from Crypto.Hash import SHA512, SHA
-from Crypto.PublicKey import RSA
-from Crypto.Signature import PKCS1_v1_5
+from Cryptodome.Hash import SHA512, SHA
+from Cryptodome.PublicKey import RSA
+from Cryptodome.Signature import PKCS1_v1_5
 
 class JenkinsUpdateCenter:
   def __init__(self):
