@@ -3,5 +3,6 @@
     "tsinghua": "https://mirrors.tuna.tsinghua.edu.cn/jenkins/",
     "bfsu": "https://mirrors.bfsu.edu.cn/jenkins/",
     "aliyun": "https://mirrors.aliyun.com/jenkins/",
-    "huawei": "https://mirrors.huaweicloud.com/jenkins/"
+    "huawei": "https://mirrors.huaweicloud.com/jenkins/",
+    "nju": "https://mirrors.nju.edu.cn/jenkins/"
 }
