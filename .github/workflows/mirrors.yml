@@ -35,7 +35,7 @@ jobs:
         python mirrors.py
         git config --global user.name "Sonic Ma"
         git config --global user.email "sonic.ma@outlook.com"
-        git remote set-url origin https://k8sre:${{ secrets.TOKEN }}@github.com/k8sre/update-center.git
+        git remote set-url origin https://kubeop:${{ secrets.TOKEN }}@github.com/kubeop/update-center.git
         git add -A
         git commit -m "Automatically updated using GitHub Actions"
         git push origin HEAD:main

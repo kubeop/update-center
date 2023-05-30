@@ -1,6 +1,6 @@
 # jenkins-update-center  
 
-[![](https://data.jsdelivr.com/v1/package/gh/k8sre/update-center/badge)](https://www.jsdelivr.com/package/gh/k8sre/update-center)
+[![](https://data.jsdelivr.com/v1/package/gh/kubeop/update-center/badge)](https://www.jsdelivr.com/package/gh/kubeop/update-center)
 
 本脚本由[lework/jenkins-update-center](https://github.com/lework/jenkins-update-center)修改而来，仅支持LTS版本Jenkins配置。
 
@@ -9,7 +9,7 @@
 ## mirror site speed test
 
 ```
-curl -sSL https://cdn.jsdelivr.net/gh/k8sre/update-center/speed-test.sh | bash
+curl -sSL https://cdn.jsdelivr.net/gh/kubeop/update-center/speed-test.sh | bash
 ```
 
 
@@ -18,8 +18,8 @@ curl -sSL https://cdn.jsdelivr.net/gh/k8sre/update-center/speed-test.sh | bash
 
 | Site   | Source                                                       | CDN                                                          |
 | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| huawei | https://raw.githubusercontent.com/k8sre/update-center/master/updates/huawei/update-center.json | https://cdn.jsdelivr.net/gh/k8sre/update-center/updates/huawei/update-center.json |
-| ustc   | https://raw.githubusercontent.com/k8sre/update-center/master/updates/ustc/update-center.json | https://cdn.jsdelivr.net/gh/k8sre/update-center/updates/ustc/update-center.json |
+| huawei | https://raw.githubusercontent.com/kubeop/update-center/master/updates/huawei/update-center.json | https://cdn.jsdelivr.net/gh/kubeop/update-center/updates/huawei/update-center.json |
+| ustc   | https://raw.githubusercontent.com/kubeop/update-center/master/updates/ustc/update-center.json | https://cdn.jsdelivr.net/gh/kubeop/update-center/updates/ustc/update-center.json |
 
 
 
@@ -29,7 +29,7 @@ curl -sSL https://cdn.jsdelivr.net/gh/k8sre/update-center/speed-test.sh | bash
 
     ```bash
     [ ! -d /var/lib/jenkins/update-center-rootCAs ] && mkdir /var/lib/jenkins/update-center-rootCAs
-    wget https://cdn.jsdelivr.net/gh/k8sre/update-center/rootCA/update-center.crt -O /var/lib/jenkins/update-center-rootCAs/update-center.crt
+    wget https://cdn.jsdelivr.net/gh/kubeop/update-center/rootCA/update-center.crt -O /var/lib/jenkins/update-center-rootCAs/update-center.crt
     chown jenkins.jenkins -R /var/lib/jenkins/update-center-rootCAs
     ```
 
@@ -38,7 +38,7 @@ curl -sSL https://cdn.jsdelivr.net/gh/k8sre/update-center/speed-test.sh | bash
 2. Change Update Site url.
 
    ```bash
-   sed -i 's#https://updates.jenkins.io/update-center.json#https://cdn.jsdelivr.net/gh/k8sre/update-center/updates/ustc/update-center.json#' /var/lib/jenkins/hudson.model.UpdateCenter.xml
+   sed -i 's#https://updates.jenkins.io/update-center.json#https://cdn.jsdelivr.net/gh/kubeop/update-center/updates/ustc/update-center.json#' /var/lib/jenkins/hudson.model.UpdateCenter.xml
    rm -f /var/lib/jenkins/updates/default.json
    
    systemctl restart jenkins
@@ -46,5 +46,5 @@ curl -sSL https://cdn.jsdelivr.net/gh/k8sre/update-center/speed-test.sh | bash
    
    > Or it can be modified on the web.
    >
-   > Go to `Jenkins` → `Manage Jenkins` → `Manage Plugins` → `Advanced` → Update Site and submit URL to your `https://cdn.jsdelivr.net/gh/k8sre/update-center/updates/ustc/update-center.json`
+   > Go to `Jenkins` → `Manage Jenkins` → `Manage Plugins` → `Advanced` → Update Site and submit URL to your `https://cdn.jsdelivr.net/gh/kubeop/update-center/updates/ustc/update-center.json`
 
