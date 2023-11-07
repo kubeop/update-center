@@ -23,8 +23,10 @@ mirrors=(
   [ustc]="https://mirrors.ustc.edu.cn/jenkins/"
   [tsinghua]="https://mirrors.tuna.tsinghua.edu.cn/jenkins/"
   [bfsu]="https://mirrors.bfsu.edu.cn/jenkins/"
+  [nju]="https://mirrors.nju.edu.cn/jenkins/"
   [aliyun]="https://mirrors.aliyun.com/jenkins/"
   [huawei]="https://mirrors.huaweicloud.com/jenkins/"
+  [tencent]="https://mirrors.cloud.tencent.com/jenkins/"
 )
 
 file="updates/current/plugin-versions.json"
