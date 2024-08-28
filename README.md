@@ -9,7 +9,7 @@
 ## mirror site speed test
 
 ```
-curl -sSL https://mirror.ghproxy.com/https://cdn.jsdelivr.net/gh/kubeop/update-center/speed-test.sh](https://raw.githubusercontent.com/kubeop/update-center/main/speed-test.sh | bash
+curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/kubeop/update-center/main/speed-test.sh | bash
 ```
 
 
