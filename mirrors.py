@@ -128,7 +128,7 @@ def main():
   for site,mirror_url in mirrors_url.items():
     print("Generate:", mirror_url)
     uc.plugins = json.loads(json.dumps(original["plugins"]).replace(original_download_url, mirror_url))
-    uc.core = json.loads(json.dumps(original["core"]).replace(original_download_url, mirror_url))
+    uc.core = json.loads(json.dumps(original["core"]).replace(original_download_url + "war/", mirror_url + "war-stable/"))
 
     uc_dir = "updates/" + site
     if not os.path.exists(uc_dir):
