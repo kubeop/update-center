@@ -106,7 +106,7 @@ def main():
   public_key = "rootCA/update-center.crt"
 
   original_download_url = "https://updates.jenkins.io/download/"
-  original_update_center_url = "https://mirrors.ustc.edu.cn/jenkins/updates/stable/update-center.json"
+  original_update_center_url = "https://mirrors.aliyun.com/jenkins/updates/stable/update-center.json"
   original_file = urllib.request.urlopen(original_update_center_url)
   try:
     original_context = original_file.read()
