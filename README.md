@@ -45,7 +45,7 @@ openssl req -new -x509 -days 3650 -key rootCA/update-center.key -out rootCA/upda
 
     ```shell
     [ ! -d /var/lib/jenkins/update-center-rootCAs ] && mkdir /var/lib/jenkins/update-center-rootCAs
-    wget https://github.com/kubeop/update-center/blob/main/rootCA/update-center.crt -O /var/lib/jenkins/update-center-rootCAs/update-center.crt
+    wget https://gh-proxy.com/https://raw.githubusercontent.com/kubeop/update-center/refs/heads/main/rootCA/update-center.crt -O /var/lib/jenkins/update-center-rootCAs/update-center.crt
     chown jenkins.jenkins -R /var/lib/jenkins/update-center-rootCAs
     ```
 
