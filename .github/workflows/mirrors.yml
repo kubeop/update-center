@@ -12,19 +12,16 @@ on:
 
 jobs:
   check:
-
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
-      matrix:
-        python-version: [3.11]
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.11
 
     - name: Install dependencies
       run: |
@@ -35,9 +32,14 @@ jobs:
       run: |
         rm -rf updates/*
         python mirrors.py
-        git config --global user.name "Sonic Ma"
-        git config --global user.email "sonic.ma@outlook.com"
-        git remote set-url origin https://kubeop:${{ secrets.TOKEN }}@github.com/kubeop/update-center.git
-        git add -f -A
-        git commit -m "Automatically updated using GitHub Actions"
-        git push -f origin HEAD:main
+
+    - name: Push
+      uses: github-actions-x/commit@v2.9
+      with:
+        github-token: ${{ secrets.TOKEN }}
+        push-branch: 'main'
+        commit-message: 'Automatically updated using GitHub Actions'
+        name: "Sonic Ma"
+        email: "sonic.ma@outlook.com"
+        force-add: 'true'
+        force-push: 'true'
